@@ -5,6 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.acme.a3csci3130.CreateContactAcitivity">
+  
+    <EditText
+        android:id="@+id/uid"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:hint="Business Number"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp" />
 
     <EditText
         android:layout_width="395dp"
@@ -16,6 +27,42 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp" />
+    
+    <Spinner
+	android:id="@+id/primbusiness"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" />
+    <!-- <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:orientation="vertical" -->
+    <!-- android:id="@+primbusiness" -->
+    <!-- > -->
+    <!--   <RadioButton  android:id="@+id/bus_fisher" -->
+    <!--     android:layout_width="wrap_content" -->
+    <!--     android:layout_height="wrap_content" -->
+    <!--     android:text="@string/bus_fisher" -->
+    <!--     android:onClick="onRadioButtonClicked"/> -->
+
+    <!--   <RadioButton  android:id="@+id/bus_dist" -->
+    <!--     android:layout_width="wrap_content" -->
+    <!--     android:layout_height="wrap_content" -->
+    <!--     android:text="@string/bus_dist" -->
+    <!--     android:onClick="onRadioButtonClicked"/> -->
+      
+    <!--   <RadioButton  android:id="@+id/bus_proc" -->
+    <!--     android:layout_width="wrap_content" -->
+    <!--     android:layout_height="wrap_content" -->
+    <!--     android:text="@string/bus_proc" -->
+    <!--     android:onClick="onRadioButtonClicked"/> -->
+
+    <!--   <RadioButton  android:id="@+id/bus_mong" -->
+    <!--     android:layout_width="wrap_content" -->
+    <!--     android:layout_height="wrap_content" -->
+    <!--     android:text="@string/bus_mong" -->
+    <!--     android:onClick="onRadioButtonClicked"/> -->
+      
+    <!-- </RadioGroup> -->
 
     <EditText
         android:id="@+id/email"
@@ -27,7 +74,23 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="8dp" />
+    
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:hint="address"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp" />
 
+    <Spinner
+	android:id="@+id/province"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" />
+	
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
