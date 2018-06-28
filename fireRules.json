@@ -3,14 +3,26 @@
     ".read": "true",
     ".write": "true",
     "contacts": {
-            "$contact": {
-                "name": {
-                    ".validate": "newData.isString() && newData.val().length < 50"
-                },
-                "email": {
-                    ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
-                }
-            }
+        "$contact": {
+            "name": {
+                ".validate": "newData.isString() && newData.val().length < 49 && newData.val().length > 1"
+            },
+	    "uid": {
+		".validate": "newData.isString() && newData.val().length == 9 && newData.val().matches(/^[0-9]+$)"
+	    },
+	    "primbusiness": {
+		".validate":"newData.isString() && newData.val().matches(/^(Fisher|Distributor|Processor|Fish Monger))"
+	    },
+            "email": {
+                ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
+            },
+	    "address": {
+		    ".validate": "newData.isString() && newData.val().length < 50"
+	    },
+	    "prov": {
+		    ".validate": "newData.val().matches(/^(AB|BC|MB|NB|NL|NS|NT|NU|ON|PE|QC|SK|YT)?$)"
+	    }
         }
+    }
   }
 }
