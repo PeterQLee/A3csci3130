@@ -17,21 +17,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="8dp" />
 
+
     <EditText
+        android:id="@+id/name"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:hint = "Name"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="48dp"
+        android:hint="Name"
         app:layout_constraintLeft_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp" />
-    
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Spinner
-	android:id="@+id/primbusiness"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content" />
+        android:id="@+id/primbusiness"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        tools:layout_editor_absoluteX="0dp" />
+
     <!-- <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android" -->
     <!-- android:layout_width="match_parent" -->
     <!-- android:layout_height="wrap_content" -->
@@ -65,31 +68,22 @@
     <!-- </RadioGroup> -->
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:hint="e-mail"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="8dp" />
-    
-    <EditText
         android:id="@+id/address"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:hint="address"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        android:layout_marginLeft="8dp"
+        android:hint="address"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="8dp" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <Spinner
-	android:id="@+id/province"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content" />
+        android:id="@+id/province"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/primbusiness"
+        tools:layout_editor_absoluteX="0dp" />
+
 	
     <Button
         android:id="@+id/submitButton"
