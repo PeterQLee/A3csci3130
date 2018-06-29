@@ -11,12 +11,19 @@ import android.widget.TextView;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.database.FirebaseDatabase;
 
+/** Main activity class. Defines behaviour for main interface
+ * 
+ */
 public class MainActivity extends Activity {
 
 
     private ListView contactListView;
     private FirebaseListAdapter<Contact> firebaseAdapter;
 
+
+    /**
+     * onCreate: used when app startsn
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,12 +59,18 @@ public class MainActivity extends Activity {
         });
     }
 
+    /** createContactButton
+     * callback for create contact button
+     */
     public void createContactButton(View v)
     {
         Intent intent=new Intent(this, CreateContactAcitivity.class);
         startActivity(intent);
     }
-
+    
+    /** showDetailView
+     * callback for clicking on an item in the list
+     */
     private void showDetailView(Contact person)
     {
         Intent intent = new Intent(this, DetailViewActivity.class);

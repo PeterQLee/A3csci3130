@@ -7,7 +7,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-
+/**
+ * DetailViewActivity
+ * Activity for examining contact
+ */
 public class DetailViewActivity extends Activity {
 
     private EditText nameField, addressField;
@@ -15,6 +18,7 @@ public class DetailViewActivity extends Activity {
     Contact receivedPersonInfo;
     private MyApplicationData appState;
 
+    /** onCreate: used when activity starts**/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,7 @@ public class DetailViewActivity extends Activity {
         setContentView(R.layout.activity_detail_view);
         receivedPersonInfo = (Contact)getIntent().getSerializableExtra("Contact");
 
+        /* Get info from fields*/
         nameField = (EditText) findViewById(R.id.name);
 	addressField = (EditText) findViewById(R.id.address);
 	primbusiness = (Spinner) findViewById(R.id.primbusiness);
